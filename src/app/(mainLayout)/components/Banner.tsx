@@ -1,37 +1,87 @@
+"use client";
+
+import profilePicture from "@/assets/images/asifrkabir_profile_picture.jpg";
+import githubLogo from "@/assets/images/logo/github-logo.svg";
+import linkedInLogo from "@/assets/images/logo/linkedin-logo.svg";
+import { Button } from "@/components/ui/button";
 import Image from "next/image";
-import bannerBg from "@/assets/images/banner-bg.jpg";
-import Link from "next/link";
 
-const Banner = () => {
+export default function Banner() {
   return (
-    <div className="relative flex items-center justify-center h-72 sm:h-96 md:h-120 lg:h-160 rounded-lg overflow-hidden">
-      {/* Dark Overlay */}
-      <div className="absolute inset-0 bg-black bg-opacity-50 z-[1]"></div>
+    <section className="relative text-gray-100 py-20 px-6 md:px-12 lg:px-24 rounded-md">
+      <div className="max-w-5xl mx-auto flex flex-col items-center text-center space-y-6">
+        <div className="flex justify-center">
+          <Image
+            src={profilePicture}
+            alt="Profile Picture"
+            width={200}
+            height={200}
+            className="rounded-full border-4 border-emerald-500 shadow-lg"
+          />
+        </div>
 
-      <div className="relative z-[2] text-center text-white p-6 sm:p-8 lg:p-10">
-        <h2 className="text-2xl sm:text-3xl lg:text-4xl font-bold mb-4">
-          Exclusive Deals on Our Best-Selling Products!
-        </h2>
-        <p className="text-base sm:text-lg lg:text-xl mb-6">
-          Shop the latest products with amazing discounts. Don&apos;t miss out!
+        <h1 className="text-4xl md:text-5xl font-extrabold leading-tight">
+          Hi, I’m <span className="text-emerald-500">Asif Rezwan Kabir</span>
+        </h1>
+
+        <p className="text-lg md:text-xl max-w-3xl text-gray-400">
+          A Software Engineer and Business Analyst based out of Dhaka,
+          Bangladesh{" "}
         </p>
-        <Link href="/products">
-          <button className="bg-emerald-600 hover:bg-emerald-700 text-white py-2 px-6 rounded-md text-lg font-semibold">
-            Shop Now
-          </button>
-        </Link>
+
+        <div className="flex flex-col md:flex-row md:space-x-4 space-y-4 md:space-y-0">
+          <Button
+            asChild
+            size="lg"
+            className="bg-emerald-500 hover:bg-emerald-600 text-white shadow-md"
+          >
+            <a
+              href="https://drive.google.com/file/d/16TVBHe8_Z666M8RXG3S_zQHrwmLcIXsu/view?usp=sharing"
+              target="_blank"
+            >
+              View Resume
+            </a>
+          </Button>
+          <Button
+            size="lg"
+            variant="outline"
+            className="border-emerald-500 text-emerald-500 hover:bg-emerald-600 hover:text-white"
+          >
+            <a href="#contact">Contact Me</a>
+          </Button>
+        </div>
+
+        <div className="flex justify-center mt-10 space-x-4">
+          <a
+            href="https://github.com/asifrkabir"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="hover:scale-110 transition-transform"
+          >
+            <Image
+              src={githubLogo}
+              alt="GitHub"
+              width={40}
+              height={40}
+              className="filter invert"
+            />
+          </a>
+          <a
+            href="https://www.linkedin.com/in/asifrkabir"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="hover:scale-110 transition-transform"
+          >
+            <Image
+              src={linkedInLogo}
+              alt="LinkedIn"
+              width={40}
+              height={40}
+              className="filter invert"
+            />
+          </a>
+        </div>
       </div>
-
-      <Image
-        src={bannerBg}
-        alt="Banner Background"
-        layout="fill"
-        objectFit="cover"
-        objectPosition="center"
-        className="absolute inset-0"
-      />
-    </div>
+    </section>
   );
-};
-
-export default Banner;
+}

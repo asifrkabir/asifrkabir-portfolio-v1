@@ -1,8 +1,4 @@
-import Products from "@/components/product/Products";
-import { Suspense } from "react";
 import Banner from "./components/Banner";
-import ProductCategories from "./components/ProductCategories";
-import HotDealsProducts from "./components/HotDealsProducts";
 
 export default function HomePage() {
   return (
@@ -11,7 +7,7 @@ export default function HomePage() {
         <Banner />
       </div>
 
-      <div className="flex items-center justify-center mb-8">
+      {/* <div className="flex items-center justify-center mb-8">
         <h1 className="text-lg font-semibold md:text-2xl text-center">
           Browse through countless product categories
         </h1>
@@ -30,7 +26,7 @@ export default function HomePage() {
       </div>
       <Suspense>
         <Products />
-      </Suspense>
+      </Suspense> */}
     </div>
   );
 }
