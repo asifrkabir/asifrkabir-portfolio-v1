@@ -1,11 +1,11 @@
 "use client";
 
-import { useGetAllProjects } from "@/hooks/project.hook";
-import { IProject } from "@/types/project.type";
-import ProjectCard from "./ProjectCard";
+import { useGetAllBlogs } from "@/hooks/blog.hook";
+import { IBlog } from "@/types";
+import BlogCard from "./BlogCard";
 
-const RecentProjects = () => {
-  const { data, isLoading, isError } = useGetAllProjects([
+const RecentBlogs = () => {
+  const { data, isLoading, isError } = useGetAllBlogs([
     { name: "limit", value: 3 },
   ]);
 
@@ -25,20 +25,20 @@ const RecentProjects = () => {
   if (isError) {
     return (
       <p className="text-center text-red-500">
-        Something went wrong while fetching the projects.
+        Something went wrong while fetching the blogs.
       </p>
     );
   }
 
-  const projects: IProject[] = data?.data || [];
+  const blogs: IBlog[] = data?.data || [];
 
   return (
     <div className="grid grid-cols-1 sm:grid-cols-1 lg:grid-cols-3 gap-8">
-      {projects.map((project) => (
-        <ProjectCard key={project._id} project={project} />
+      {blogs.map((blog) => (
+        <BlogCard key={blog._id} blog={blog} />
       ))}
     </div>
   );
 };
 
-export default RecentProjects;
+export default RecentBlogs;

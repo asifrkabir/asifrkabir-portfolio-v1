@@ -34,6 +34,7 @@ export default function MainMobileNavbar() {
             <Link href="/">Home</Link>
             <Link href="/about">About Me</Link>
             <Link href="/projects">Projects</Link>
+            <Link href="/blogs">Blogs</Link>
           </nav>
         </SheetContent>
       </Sheet>

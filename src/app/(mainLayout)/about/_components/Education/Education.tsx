@@ -4,7 +4,7 @@ import { GraduationCap } from "lucide-react";
 const educationData = [
   {
     id: 1,
-    title: "Executive Master's in information Technology",
+    title: "Executive Master's in Information Technology",
     institution: "IIT, Dhaka University",
     startDate: "2022",
     endDate: "2023",
@@ -44,7 +44,7 @@ export default function Education() {
 
       {educationData.map((edu) => (
         <div key={edu.id} className="relative flex items-start">
-          <div className="z-10 bg-emerald-700 text-white rounded-full p-3 flex items-center justify-center shadow-md">
+          <div className="z-10 bg-emerald-500 text-white rounded-full p-2 flex items-center justify-center shadow-md">
             <GraduationCap size={20} />
           </div>
 

@@ -13,3 +13,4 @@ export * from "./user.type";
 export * from "./skill.type";
 export * from "./project.type";
 export * from "./experience.type";
+export * from "./blog.type";

@@ -1,3 +1,4 @@
+import RecentBlogs from "@/components/Blog/RecentBlogs";
 import RecentProjects from "@/components/Project/RecentProjects";
 import { Suspense } from "react";
 import Banner from "./components/Banner";
@@ -26,6 +27,15 @@ export default function HomePage() {
       </div>
       <Suspense>
         <RecentProjects />
+      </Suspense>
+
+      <div className="flex items-center justify-center mb-8 mt-20">
+        <h1 className="text-lg font-semibold md:text-2xl text-center">
+          Recent Blogs
+        </h1>
+      </div>
+      <Suspense>
+        <RecentBlogs />
       </Suspense>
     </div>
   );
