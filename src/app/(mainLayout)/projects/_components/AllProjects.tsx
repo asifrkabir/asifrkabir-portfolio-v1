@@ -15,7 +15,7 @@ const AllProjects = () => {
         {[...Array(3)].map((_, index) => (
           <div
             key={index}
-            className="h-72 bg-gray-700 rounded-lg animate-pulse"
+            className="h-72 bg-neutral-900 rounded-lg animate-pulse"
           />
         ))}
       </div>

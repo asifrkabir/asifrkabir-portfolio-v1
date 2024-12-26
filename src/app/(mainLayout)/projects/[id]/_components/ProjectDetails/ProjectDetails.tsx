@@ -46,7 +46,7 @@ const ProjectDetails = ({ project }: IProps) => {
               <h4 className="font-semibold mb-2">Technologies Used:</h4>
               <div className="flex gap-2 flex-wrap">
                 {technologies.map((tech, index) => (
-                  <Badge key={index} className="bg-emerald-500 text-white">
+                  <Badge key={index} className="bg-emerald-700 text-white">
                     {tech}
                   </Badge>
                 ))}

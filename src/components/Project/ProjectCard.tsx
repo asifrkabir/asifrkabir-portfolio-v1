@@ -26,7 +26,7 @@ const ProjectCard = ({ project }: IProjectCardProps) => {
         <h2 className="text-xl font-semibold">{title}</h2>
         <div className="mt-2 flex flex-wrap gap-2">
           {technologies.map((tech, index) => (
-            <Badge key={index} className="bg-gray-700 text-white">
+            <Badge key={index} className="bg-emerald-700 text-white">
               {tech}
             </Badge>
           ))}

@@ -32,9 +32,8 @@ export default function MainMobileNavbar() {
           </Link>
           <nav className="flex flex-col gap-3 lg:gap-4 mt-6">
             <Link href="/">Home</Link>
+            <Link href="/about">About Me</Link>
             <Link href="/projects">Projects</Link>
-            <Link href="/orders">My Orders</Link>
-            <Link href="/recent-products">Recently Viewed</Link>
           </nav>
         </SheetContent>
       </Sheet>
