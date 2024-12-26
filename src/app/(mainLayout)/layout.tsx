@@ -1,3 +1,4 @@
+import Footer from "@/components/Shared/Footer/Footer";
 import MainHeader from "@/components/Shared/Nav/MainHeader/MainHeader";
 
 export default function MainLayout({
@@ -9,6 +10,7 @@ export default function MainLayout({
     <div>
       <MainHeader />
       <div className="min-h-screen w-full p-8">{children}</div>
+      <Footer />
     </div>
   );
 }
