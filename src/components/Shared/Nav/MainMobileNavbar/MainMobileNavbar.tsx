@@ -11,7 +11,6 @@ import { VisuallyHidden } from "@radix-ui/react-visually-hidden";
 import { AlignJustify } from "lucide-react";
 import Image from "next/image";
 import Link from "next/link";
-import styles from "./MainMobileNavbar.module.css";
 
 export default function MainMobileNavbar() {
   return (
@@ -33,10 +32,7 @@ export default function MainMobileNavbar() {
           </Link>
           <nav className="flex flex-col gap-3 lg:gap-4 mt-6">
             <Link href="/">Home</Link>
-            <Link href="/products">Products</Link>
-            <Link href="/sale" className={styles.animatedGradientText}>
-              Flash Sale!
-            </Link>
+            <Link href="/projects">Projects</Link>
             <Link href="/orders">My Orders</Link>
             <Link href="/recent-products">Recently Viewed</Link>
           </nav>

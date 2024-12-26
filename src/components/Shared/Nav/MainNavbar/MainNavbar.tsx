@@ -1,7 +1,6 @@
 import logo from "@/assets/images/logo/nextjs-logo.svg";
 import Image from "next/image";
 import Link from "next/link";
-import styles from "./MainNavbar.module.css";
 
 export default function MainNavbar() {
   return (
@@ -11,10 +10,7 @@ export default function MainNavbar() {
       </Link>
       <nav className="flex items-center gap-3 lg:gap-4 ml-8">
         <Link href="/">Home</Link>
-        <Link href="/products">Products</Link>
-        <Link href="/sale" className={styles.animatedGradientText}>
-          Flash Sale!
-        </Link>
+        <Link href="/projects">Projects</Link>
         <Link href="/orders">My Orders</Link>
         <Link href="/recent-products">Recently Viewed</Link>
       </nav>
