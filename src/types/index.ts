@@ -11,3 +11,4 @@ export * from "./shop.type";
 export * from "./ui.type";
 export * from "./user.type";
 export * from "./skill.type";
+export * from "./project.type";
