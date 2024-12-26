@@ -39,3 +39,29 @@ export const getAllProjects = async (params?: IQueryParam[]) => {
     );
   }
 };
+
+export const getProjectById = async (id: string) => {
+  try {
+    const { data } = await axiosInstance.get<IApiResponse<IProject>>(
+      `/projects/${id}`
+    );
+
+    return data;
+  } catch (error: any) {
+    if (error.response) {
+      const responseData = error.response.data as IApiResponse<null>;
+      const statusCode = error.response.status;
+
+      console.error(`API Error (${statusCode}):`, responseData);
+
+      return {
+        ...responseData,
+        statusCode,
+      };
+    }
+
+    throw new Error(
+      error.message || "Something went wrong. Please try again later."
+    );
+  }
+};

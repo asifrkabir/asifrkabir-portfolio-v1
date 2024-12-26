@@ -55,7 +55,7 @@ const ProjectCard = ({ project }: IProjectCardProps) => {
             <Eye className="mr-2" /> View Demo
           </Button>
         </Link>
-        <Link href={`/projects/${project._id}`} target="_blank">
+        <Link href={`/projects/${project._id}`}>
           <Button variant="outline" size="sm">
             View Details
           </Button>
