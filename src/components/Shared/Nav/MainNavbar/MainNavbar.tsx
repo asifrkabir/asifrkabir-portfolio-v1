@@ -1,4 +1,4 @@
-import logo from "@/assets/images/logo.png";
+import logo from "@/assets/images/logo/nextjs-logo.svg";
 import Image from "next/image";
 import Link from "next/link";
 import styles from "./MainNavbar.module.css";
