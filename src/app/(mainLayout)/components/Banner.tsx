@@ -5,6 +5,7 @@ import githubLogo from "@/assets/images/logo/github-logo.svg";
 import linkedInLogo from "@/assets/images/logo/linkedin-logo.svg";
 import { Button } from "@/components/ui/button";
 import Image from "next/image";
+import Link from "next/link";
 
 export default function Banner() {
   return (
@@ -42,13 +43,16 @@ export default function Banner() {
               View Resume
             </a>
           </Button>
-          <Button
-            size="lg"
-            variant="outline"
-            className="border-emerald-500 text-emerald-500 hover:bg-emerald-600 hover:text-white"
-          >
-            <a href="#contact">Contact Me</a>
-          </Button>
+
+          <Link href="/contact">
+            <Button
+              size="lg"
+              variant="outline"
+              className="border-emerald-500 text-emerald-500 hover:bg-emerald-600 hover:text-white"
+            >
+              Contact Me
+            </Button>
+          </Link>
         </div>
 
         <div className="flex justify-center mt-10 space-x-4">

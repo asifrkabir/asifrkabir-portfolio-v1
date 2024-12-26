@@ -7,11 +7,10 @@ const inter = Inter({ subsets: ["latin"] });
 
 export const metadata: Metadata = {
   title: {
-    template: "%s | ShopSphere",
-    default: "ShopSphere",
+    template: "%s | Asif Rezwan Kabir",
+    default: "Asif Rezwan Kabir",
   },
-  description:
-    "ShopSphere is your go-to e-commerce platform for discovering and purchasing high-quality products from trusted shops. Enjoy seamless shopping with personalized recommendations, secure payments, and a user-friendly experience tailored for you.",
+  description: "Asif Rezwan Kabir's Portfolio",
 };
 
 export default function RootLayout({
